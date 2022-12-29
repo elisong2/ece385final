@@ -1,0 +1,32 @@
+module draw_block( input [1:0] x0, x1, x2, x3, y0, y1, y2, y3,
+                    input [9:0] DrawX, DrawY,
+                    output is_block);
+
+logic [9:0] cx0, cy0, cx1, cy1, cx2, cy2, cx3, cy3;
+
+assign cx0 = (x0(10'd20)) + 10'd111;
+assign cx1 = (x1(10'd20)) + 10'd111;
+assign cx2 = (x2(10'd20)) + 10'd111;
+assign cx3 = (x3(10'd20)) + 10'd111;
+assign cy0 = (y0 + 10'd18)(10'd20) + 10'd21;
+assign cy1 = (y1 + 10'd18)(10'd20) + 10'd21;
+assign cy2 = (y2 + 10'd18)(10'd20) + 10'd21;
+assign cy3 = (y3 + 10'd18)(10'd20) + 10'd21;
+
+always_comb
+begin
+    if(((DrawX > cx0) && (DrawX < (cx0 + 10'd20))) && ((DrawY > cy0) && (DrawY < (cy0+ 10d'20))))
+        assign is_block = 1;
+    else if (((DrawX > cx1) && (DrawX < (cx1 + 10'd20))) && ((DrawY > cy1) && (DrawY < (cy1+ 10d'20))))
+        assign is_block = 1;
+    else if (((DrawX > cx2) && (DrawX < (cx2 + 10'd20))) && ((DrawY > cy2) && (DrawY < (cy3+ 10d'20))))
+        assign is_block = 1;
+    else if (((DrawX > cx3) && (DrawX < (cx3 + 10'd20))) && ((DrawY > cy3) && (DrawY < (cy3+ 10d'20))))
+        assign is_block = 1;
+    else 
+        assign is_block = 0;
+end
+
+
+
+endmodule

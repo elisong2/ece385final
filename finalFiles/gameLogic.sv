@@ -1,0 +1,95 @@
+//module gameLogic (input reset, frame_clk, 
+//						input [7:0] keycode,
+//						//input shape type
+//						
+//						output [16:0] score, 
+//						output [1:0] rotation_index);
+//						);
+//	 
+//	parameter [9:0] x_leftLimit = 100;
+//	parameter [9:0] x_rightLimit = 340
+//	parameter [9:0] y_topLimit = 10;
+//	parameter [9:0] y_botLimit = 470;
+//	
+//	// 10 x 20 blocks
+//	
+//	logic [3:0] xCount; // tracks if a row is full
+//	logic [4:0] yCount; // tracks if the game is over
+//	logic [9:0] xPos, xMotion, yPos, yMotion, size;
+//	
+//	 
+//	
+//	
+//	always_ff @ (posedge reset or posedge frame_clk)
+//		begin: moveBlock
+//			if (reset)
+//				begin
+//					
+//				end
+//			
+//			else  
+//				begin
+//				
+//					if (yCount == 5'b10100) // grid fully stacked
+//						begin
+//						end
+//					
+//					if (xCount == 4'b1010) // bottom row full
+//						begin
+//						end
+//				
+//					
+//					case (keycode) 
+//					 
+//					 // Enter (start)	
+//						8'h28: begin
+//									if ()
+//									
+//								 end
+//					
+//					 // Esc (pause)	
+//						8'h29: begin
+//								 end
+//					
+//					
+//					 // A (shift left)
+//						8'h04: begin
+//								 end
+//					 // D (shift right)
+//						8'h07: begin
+//								 end
+//					
+//					
+//					 // W (rotate clockwise) -> port in block ID
+//						8'h1A: begin
+//									if (ID == )
+//										begin
+//											rotation_index = 2'b
+//										end
+//									
+//									else if (ID == ) 
+//										begin
+//										end
+//									
+//									else if (ID == )
+//										begin
+//										end
+//									
+//									else if (ID == )
+//										begin
+//										end
+//									
+//									
+//								 end
+//					
+//					 // S (drop)
+//						8'h16: begin
+//								 end
+//					
+//					
+//					 
+//				end
+//		
+//		
+//		end
+					  
